@@ -1,12 +1,124 @@
-<html><head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Title</title>
+    <style>
+        :root {
+  --hexagon-clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+}
+        body {
+            font-family: "Josefin Sans", sans-serif ;
+            font-size: smaller;
+            font-weight: 200;
+        }
+
+        p {
+            text-transform: uppercase;
+            font-size: smaller;
+            font-weight: 400;
+        }
+        b {
+            font-weight: 200;
+        }
+        h3 {
+            font-weight: 400;
+            text-transform: uppercase;
+
+        }
+
+        .hexagon-wrapper {
+            position: relative;
+            display: inline-block; /* Ensure the wrapper only takes up necessary space */
+            position: relative;
+           
+    vertical-align: middle;
+
+        }
+
+        .hexagon-container {
+            width: 200px; /* Adjust to your desired size */
+            height: 180px; /* Adjust to your desired size */
+            position: relative;
+            overflow: hidden; /* Clip the image to the hexagon shape */
+        }
+
+        .hexagon-border {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 103%; /* Adjust the size of the border as needed */
+            height: 103%; /* Adjust the size of the border as needed */
+            background-color: #0d385e; /* Adjust to your desired border color */
+            clip-path: var(--hexagon-clip-path);
+            transform: translate(-50%, -50%); /* Center the border */
+            z-index: -1; /* Ensure the border is behind the image */
+        }
+
+        .hexagon-container img {
+            width: 100%; /* Make the image fill the container */
+            height: 100%; /* Make the image fill the container */
+            position: absolute;
+            top: 0;
+            left: 0;
+            clip-path: var(--hexagon-clip-path);
+            object-fit: cover; /* Ensure the image fills the hexagon */
+        }
+
+
+        .text-container {
+        margin-top: 40px; /* Adjust margin as needed */
+        margin-left: 40px; /* Adjust margin as needed */
+        display: inline-block;
+        vertical-align: middle;
+}
+
+        /* For left positioning */
+        .text-container.left {
+        margin-right: 40px; /* Adjust margin as needed */
+}
+
+        /* For right positioning */
+        .text-container.right {
+        margin-left: auto; /* Push to the right */
+        margin-right: 40px; /* Adjust margin as needed */
+}
+    </style>
 </head>
 <body>
-<img id="activityImage" src="" alt="enf1">
-<h3 id="activityTitle">Petit Renard
-</h3>
-<p id="activityDescription">New activity description</p>
-<b id="activityDate">Mercredi 12 avril</b>
-<b id="activityHoraires">14h à 15h30</b>
+    
+    <div class="hexagon-wrapper">
+        <div class="hexagon-border"></div> <!-- Border div -->
+        <div class="hexagon-container">
+            
+            <img id="activityImage1" src="testimage.jpeg" alt="enf1">
+        </div>
+    </div>
+<div class="text-container">
+    <h3 id="activityTitle1">Petit Renard</h3>
+    <b id="activityDate1">Mercredi 12 avril</b>
+    <b id="activityHoraires1">14h à 15h30</b>
+    <p id="activityDescription1">New activity description</p>
+    </div>
 
-
-</body></html>
+    <br /><br /><br />
+    
+    <div class="hexagon-wrapper">
+        <div class="hexagon-border"></div> <!-- Border div -->
+        <div class="hexagon-container">
+            
+            <img id="activityImage2" src="testimage.jpeg" alt="enf1">
+        </div>
+    </div>
+<div class="text-container">
+    <h3 id="activityTitle2">Petit Renard</h3>
+    <p id="activityDescription2">New activity description</p>
+    <b id="activityDate2">Mercredi 12 avril</b>
+    <b id="activityHoraires2">14h à 15h30</b>
+    </div>
+</body>
+</html>
